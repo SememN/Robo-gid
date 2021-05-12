@@ -1,0 +1,52 @@
+#container{
+  display: grid;
+  grid-template-columns: 10% 80% 10%;
+  grid-template-rows: repeat(2, auto);
+  grid-row-gap: 2%;
+}
+
+/*main-info block*/
+#main-info{
+  grid-column-start: 2;
+  grid-column-end: 3;
+
+  display: grid;
+  grid-template-columns: 40% 60%;
+  grid-gap: 2%;
+}
+
+#kvant-logo{
+  justify-self: end;
+  max-height: 75%;
+  max-width: 75%;
+}
+
+/*courses block*/
+#courses{
+  grid-column-start: 2;
+  grid-column-end: 3;
+
+  grid-row-start: 2;
+  grid-row-end: 3;
+
+  display: grid;
+  grid-template-rows: repeat(5, auto);
+  grid-template-columns: repeat(3,32%);
+  grid-column-gap: 3%;
+}
+
+#courses-header{
+  justify-self: center;
+  grid-column-start: 1;
+  grid-column-end: 4;
+}
+
+.course{
+  display: grid;
+  grid-template-rows: 54% 5% 5% 5% 50%;
+}
+
+.course-logo{
+  max-width: 100%;
+  height: auto;
+}
