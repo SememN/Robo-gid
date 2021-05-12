@@ -1,12 +1,16 @@
 from django.shortcuts import render
 from django.utils.html import format_html
-from .data import it_kvant, aero_kvant, auto_kvant, hi_tech_kvant, prom_design_kvant, prom_robo_kvant
+
+from .models import ItCourse, AutoCourse, AeroCourse, MathCourse, PromDesCourse, PromRoboCourse, HiTechCourse,\
+    ChessCourse, ItDescription, AutoDescription, AeroDescription, MathDescription, PromDesDescription,\
+    PromRoboDescription, HiTechDescription, ChessCDescription
 
 
 def load_it_page(request):
-    return render(request, 'kvants/base_kvant.html', {'title': it_kvant.NAME,
-                                                      'html_source': format_html(it_kvant.HTML),
-                                                      })
+    courses = ItCourse.objects.all()
+    description = ItDescription.objects.get(id=1)
+    return render(request, 'kvants/base_kvant.html', {'courses_list': courses,
+                                                      'kvant': description})
 
 
 def load_aero_page(request):
