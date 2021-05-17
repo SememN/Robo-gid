@@ -45,7 +45,7 @@
 
 .course{
   display: grid;
-  grid-template-rows: 54% 5% 5% 5% 50%;
+  grid-template-rows: 54% 5% 5% 24% 10%;
 }
 
 .course-logo{
@@ -53,10 +53,10 @@
   height: auto;
 }
 
-/*----*/
-
 /* Затемнение */
 .blackout{
+  grid-row-start: 1;
+  grid-row-end: 2;
   background: #000;
   width: 100%;
   height: 93%;
@@ -71,32 +71,20 @@
 .blackout img:hover{
   opacity: 0.6;
 }
-/*----*/
 
-/* Направление текст*/
-.course_description_level .course-direction{
+/* Направление, уровень текст*/
+.course-creds{
   color: #6c757d;
   font-family: FreeSetC,sans-serif;
 }
-/*----*/
 
-/* Уровень текст */
-.course_description_level .course-level{
-  color: #6c757d;
-  font-family: FreeSetC,sans-serif;
-}
-/*----*/
 
-/* отступы: направления, уровень, описания  */
-.course{
-  line-height: 150%;
-  margin-top: 5%;
-}
-/*----*/
-.course_description_level button{
-  width: 150px;
-  height: 50px;
-  margin-left: 25%;
+.button-mid{
+  grid-row-start: 5;
+  grid-row-end: 6;
+
+  max-width: 50%;
+  max-height: 70%;
   background: #000;
   color: #fff;
   border: 2px solid #fff;
@@ -104,16 +92,9 @@
   transition: 0.5s;
 }
 
-.course_description_level button:hover{
+.button-mid:hover{
   background: #fff;
   color: #000;
   border: 2px solid #000;
   transform: scale(1.1);
-}
-.course_description_level{
-  margin-top: -4%;
-}
-
-.course-level{
-  margin-top: -3%;
 }
