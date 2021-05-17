@@ -1,3 +1,5 @@
+@import url(https://use.fontawesome.com/releases/v5.12.0/css/all.css);
+
 #container{
   display: grid;
   grid-template-columns: 10% 80% 10%;
@@ -49,4 +51,69 @@
 .course-logo{
   max-width: 100%;
   height: auto;
+}
+
+/*----*/
+
+/* Затемнение */
+.blackout{
+  background: #000;
+  width: 100%;
+  height: 93%;
+  overflow: hidden;
+}
+
+.blackout img{
+  opacity: 1;
+  transition: .3s ease-in-out;
+}
+
+.blackout img:hover{
+  opacity: 0.6;
+}
+/*----*/
+
+/* Направление текст*/
+.course_description_level .course-direction{
+  color: #6c757d;
+  font-family: FreeSetC,sans-serif;
+}
+/*----*/
+
+/* Уровень текст */
+.course_description_level .course-level{
+  color: #6c757d;
+  font-family: FreeSetC,sans-serif;
+}
+/*----*/
+
+/* отступы: направления, уровень, описания  */
+.course{
+  line-height: 150%;
+  margin-top: 5%;
+}
+/*----*/
+.course_description_level button{
+  width: 150px;
+  height: 50px;
+  margin-left: 25%;
+  background: #000;
+  color: #fff;
+  border: 2px solid #fff;
+  border-radius: 50px;
+  transition: 0.5s;
+}
+
+.course_description_level button:hover{
+  background: #fff;
+  color: #000;
+  border: 2px solid #000;
+  transform: scale(1.1);
+}
+.course_description_level{
+  margin-top: -4%;
+}
+
+.course-level{
+  margin-top: -3%;
 }
