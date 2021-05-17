@@ -22,12 +22,19 @@
             <h1 id="courses-header">Наши курсы</h1>
                 {% for course in courses_list %}
                     <div class="course">
-                        <a href="{{ course.link }}">
-                            <img src="{{ course.preview }}" alt="course-logo" class="course-logo">
-                        </a>
-                        <p class="course-direction">Направление: {{  course.direction }}</p>
-                        <p class="course-level">Уровень: {{ course.level }}</p>
-                        <p class="course-description">{{ course.description }}</p>
+                        <div class="blackout">
+                            <a href="{{ course.link }}">
+                                <img src="{{ course.preview }}" alt="course-logo" class="course-logo">
+                            </a>
+                        </div>
+                        <div class="course_description_level">
+                            <strong><p class="course-direction">Направление: {{  course.direction }}</p></strong>
+                            <strong><p class="course-level">Уровень: {{ course.level }}</p></strong>
+                            <p class="course-description">{{ course.description }}</p>
+                            <div class="button_mid">
+                                <button>Записаться</button>
+                            </div>
+                        </div>
                     </div>
                 {% endfor %}
         </div>
