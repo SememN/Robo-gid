@@ -1,10 +1,9 @@
 from django.shortcuts import render
 from django.utils.html import format_html
 
-from .models import ItCourse, AutoCourse, AeroCourse, MathCourse, PromDesCourse, PromRoboCourse, HiTechCourse,\
-    ChessCourse, ItDescription, AutoDescription, AeroDescription, MathDescription, PromDesDescription,\
-    PromRoboDescription, HiTechDescription, ChessCDescription
-
+from .models import ItCourse, AutoCourse, AeroCourse, PromDesCourse, PromRoboCourse, HiTechCourse,\
+    ItDescription, AutoDescription, AeroDescription, PromDesDescription,\
+    PromRoboDescription, HiTechDescription
 
 def load_it_page(request):
     courses = ItCourse.objects.all()
@@ -14,30 +13,40 @@ def load_it_page(request):
 
 
 def load_aero_page(request):
-    return render(request, 'kvants/base_kvant.html', {'title': aero_kvant.NAME,
-                                                      'html_source': format_html(aero_kvant.HTML),
+    courses = AeroCourse.objects.all()
+    description = AeroDescription.objects.get(id=2)
+    return render(request, 'kvants/base_kvant.html', {'courses_list': courses,
+                                                      'kvant': description,
                                                       })
 
 
 def load_auto_page(request):
-    return render(request, 'kvants/base_kvant.html', {'title': auto_kvant.NAME,
-                                                      'html_source': format_html(auto_kvant.HTML),
+    courses = AutoCourse.objects.all()
+    description = AutoDescription.objects.get(id=3)
+    return render(request, 'kvants/base_kvant.html', {'courses_list': courses,
+                                                      'kvant': description,
                                                       })
 
 
 def load_design_page(request):
-    return render(request, 'kvants/base_kvant.html', {'title': prom_design_kvant.NAME,
-                                                      'html_source': format_html(prom_design_kvant.HTML),
+    courses = PromDesCourse.objects.all()
+    description = PromDesDescription.objects.get(id=5)
+    return render(request, 'kvants/base_kvant.html', {'courses_list': courses,
+                                                      'kvant': description,
                                                       })
 
 
 def load_robo_page(request):
-    return render(request, 'kvants/base_kvant.html', {'title': prom_robo_kvant.NAME,
-                                                      'html_source': format_html(prom_robo_kvant.HTML),
+    courses = PromRoboCourse.objects.all()
+    description = PromRoboDescription.objects.get(id=6)
+    return render(request, 'kvants/base_kvant.html', {'courses_list': courses,
+                                                      'kvant': description,
                                                       })
 
 
 def load_hi_tech_page(request):
-    return render(request, 'kvants/base_kvant.html', {'title': hi_tech_kvant.NAME,
-                                                      'html_source': format_html(hi_tech_kvant.HTML),
+    courses = HiTechCourse.objects.all()
+    description = HiTechDescription.objects.get(id=4)
+    return render(request, 'kvants/base_kvant.html', {'courses_list': courses,
+                                                      'kvant': description,
                                                       })
