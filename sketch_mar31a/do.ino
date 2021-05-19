@@ -5,7 +5,7 @@ int delta = 1000;
 int distanse = delta;
 int listanse;
 int ristanse;
-int kit;
+uint32_t kit;
 
 GStepper< STEPPER2WIRE> stepperL(1, 2, 3, 4);
 GStepper< STEPPER2WIRE> stepperR(1, 5, 6, 7);
@@ -15,10 +15,12 @@ void setup() {
   stepperL.setRunMode(FOLLOW_POS);
   stepperL.setMaxSpeed(delta);
   stepperL.setAcceleration(delta / 2);
+  stepperL.enable();
 
   stepperR.setRunMode(FOLLOW_POS);
   stepperR.setMaxSpeed(delta);
   stepperR.setAcceleration(delta / 2);
+  stepperR.enable();
 }
 void loop() {
   if (stepperL.tick() && stepperR.tick()) {
@@ -43,5 +45,4 @@ void loop() {
     else
       doing(command);
   }
-  //command = 0;
 }
