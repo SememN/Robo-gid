@@ -45,12 +45,19 @@
 
 .course{
   display: grid;
-  grid-template-rows: 54% 5% 5% 24% 10%;
+  grid-template-rows: 43% 12% 6% 5% 24% 10%;
 }
 
 .course-logo{
   max-width: 100%;
   height: auto;
+}
+
+/* Название курса */
+.course-name{
+  color: #000;
+  font-size: 25px;
+  font-family: sans-serif;
 }
 
 /* Затемнение */
@@ -59,7 +66,7 @@
   grid-row-end: 2;
   background: #000;
   width: 100%;
-  height: 93%;
+  height: 270px;
   overflow: hidden;
 }
 
@@ -80,16 +87,13 @@
 
 
 .button-mid{
-  grid-row-start: 5;
-  grid-row-end: 6;
-
   max-width: 50%;
   max-height: 70%;
   background: #000;
   color: #fff;
   border: 2px solid #fff;
   border-radius: 50px;
-  transition: 0.5s;
+  transition: 0.5s ease-in-out;
 }
 
 .button-mid:hover{
@@ -97,4 +101,36 @@
   color: #000;
   border: 2px solid #000;
   transform: scale(1.1);
+}
+
+
+
+
+
+
+
+/* Кнопка назад */
+.come-back{
+  grid-column-start: 1;
+  grid-column-end: 2;
+  position: fixed;
+
+  width: 9%;
+  height: 17%;
+  background: #000;
+  border: 2px solid #fff;
+  left: 0.5%;
+  border-radius: 20px;
+  transition: 0.5s ease-in-out;
+}
+
+.come-back:hover{
+  background: #fff;
+  color: #000;
+  border: 2px solid #000;
+  transform: scale(1.1);
+}
+
+.button-back button{
+  color: #fff;
 }
