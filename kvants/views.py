@@ -1,46 +1,52 @@
 from django.shortcuts import render
 from django.utils.html import format_html
 
-from . import services as servc
-
+from .models import ItCourse, AutoCourse, AeroCourse, PromDesCourse, PromRoboCourse, HiTechCourse,\
+    ItDescription, AutoDescription, AeroDescription, PromDesDescription,\
+    PromRoboDescription, HiTechDescription
 
 def load_it_page(request):
-    creds = servc.get_creds('it')
-    return render(request, 'kvants/base_kvant.html', {'kvant': creds[0],
-                                                      'courses_list': creds[1],
-                                                      })
+    courses = ItCourse.objects.all()
+    description = ItDescription.objects.get(id=1)
+    return render(request, 'kvants/base_kvant.html', {'courses_list': courses,
+                                                      'kvant': description})
 
 
 def load_aero_page(request):
-    creds = servc.get_creds('aero')
-    return render(request, 'kvants/base_kvant.html', {'kvant': creds[0],
-                                                      'courses_list': creds[1],
+    courses = AeroCourse.objects.all()
+    description = AeroDescription.objects.get(id=2)
+    return render(request, 'kvants/base_kvant.html', {'courses_list': courses,
+                                                      'kvant': description,
                                                       })
 
 
 def load_auto_page(request):
-    creds = servc.get_creds('auto')
-    return render(request, 'kvants/base_kvant.html', {'kvant': creds[0],
-                                                      'courses_list': creds[1],
+    courses = AutoCourse.objects.all()
+    description = AutoDescription.objects.get(id=3)
+    return render(request, 'kvants/base_kvant.html', {'courses_list': courses,
+                                                      'kvant': description,
                                                       })
 
 
 def load_design_page(request):
-    creds = servc.get_creds('design')
-    return render(request, 'kvants/base_kvant.html', {'kvant': creds[0],
-                                                      'courses_list': creds[1],
+    courses = PromDesCourse.objects.all()
+    description = PromDesDescription.objects.get(id=5)
+    return render(request, 'kvants/base_kvant.html', {'courses_list': courses,
+                                                      'kvant': description,
                                                       })
 
 
 def load_robo_page(request):
-    creds = servc.get_creds('robo')
-    return render(request, 'kvants/base_kvant.html', {'kvant': creds[0],
-                                                      'courses_list': creds[1],
+    courses = PromRoboCourse.objects.all()
+    description = PromRoboDescription.objects.get(id=6)
+    return render(request, 'kvants/base_kvant.html', {'courses_list': courses,
+                                                      'kvant': description,
                                                       })
 
 
 def load_hi_tech_page(request):
-    creds = servc.get_creds('hi-tech')
-    return render(request, 'kvants/base_kvant.html', {'kvant': creds[0],
-                                                      'courses_list': creds[1],
+    courses = HiTechCourse.objects.all()
+    description = HiTechDescription.objects.get(id=4)
+    return render(request, 'kvants/base_kvant.html', {'courses_list': courses,
+                                                      'kvant': description,
                                                       })
