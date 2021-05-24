@@ -36,7 +36,7 @@ class HiTechDescription(Description):
 class Course(models.Model):
     link = models.CharField(max_length=300)
     preview = models.CharField(max_length=300)
-    name = models.CharField(max_length=30)
+    name = models.CharField(max_length=40)
     direction = models.CharField(max_length=10)
     level = models.CharField(max_length=11)
     description = models.TextField(max_length=5000)
