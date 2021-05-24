@@ -1,8 +1,8 @@
 #include <GyverStepper.h>
 
 int command;
-int delta = 1000;
-int distanse = delta;
+uint32_t delta = 1000;
+uint32_t distanse = delta;
 int listanse;
 int ristanse;
 uint32_t kit;
