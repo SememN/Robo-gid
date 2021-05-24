@@ -18,15 +18,15 @@ void doing(int comand)
   }
   else if (comand == -5) {
     Serial.print("не (:");
-    listanse = 2 * delta * (listanse / distanse);
-    ristanse = 2 * delta * (ristanse / distanse);
+    listanse = delta * (listanse / distanse);
+    ristanse = delta * (ristanse / distanse);
   }
 
   Serial.println("Полный Вперёд!:)");
   stepperL.setTarget(listanse, RELATIVE);
   stepperR.setTarget(ristanse, RELATIVE);
-  stepperL.getTarget();
-  stepperR.getTarget();
-  stepperL.getCurrent();
-  stepperR.getCurrent();
+  Serial.println(stepperL.getTarget());
+  Serial.println(stepperR.getTarget());
+  Serial.println(stepperL.getCurrent());
+  Serial.println(stepperR.getCurrent());
 }
