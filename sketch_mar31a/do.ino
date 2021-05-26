@@ -1,10 +1,10 @@
 #include <GyverStepper.h>
 
-int command;
+long command;
 uint32_t delta = 1000;
 uint32_t distanse = delta;
-int listanse;
-int ristanse;
+long listanse;
+long ristanse;
 uint32_t kit;
 
 GStepper< STEPPER2WIRE> stepperL(1, 2, 3, 4);
@@ -12,6 +12,7 @@ GStepper< STEPPER2WIRE> stepperR(1, 5, 6, 7);
 
 void setup() {
   Serial.begin(115200);
+  
   stepperL.setRunMode(FOLLOW_POS);
   stepperL.setMaxSpeed(delta);
   stepperL.setAcceleration(delta / 2);
@@ -24,8 +25,9 @@ void setup() {
 }
 void loop() {
   if (stepperL.tick() && stepperR.tick()) {
-    if (Serial.available())
-      doing(-5);
+    if (Serial.available()) {
+      stopping();
+    }
   }
   else if (!stepperL.tick() || !stepperR.tick()) {
     if (Serial.available()) {
