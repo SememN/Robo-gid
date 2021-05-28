@@ -12,8 +12,7 @@
       <!-- Indicators -->
       <ol class="carousel-indicators recommended-list clearfix">
         <li data-target="#carousel-example-generic" data-slide-to="0" class="active">Квантумы</li>
-        <li data-target="#carousel-example-generic" data-slide-to="1">Расписание</li>
-        <li data-target="#carousel-example-generic" data-slide-to="2">Проекты</li>
+        <li data-target="#carousel-example-generic" data-slide-to="1">Проекты</li>
       </ol>
 
       <!-- Wrapper for slides -->
@@ -21,34 +20,50 @@
         <div class="item active">
            <div class="kvantums-list">
                 <div class="kvantums-heading">
-                    <h1 >Квантумы</h1>
+                    <h1>Квантумы</h1>
                 </div>
-                <div class="kvantum-logo">
+                <div class="kvantum-row-2">
                     <a href="{% url 'kvants:it-kvant-page' %}">
                         <img alt="it_kvant" src="{% static 'img/main_page/it_kvant.jpg' %}" width=250px height=250px>
                     </a>
+                    <p class="kvant-name">IT Квантум</p>
                 </div>
-                <div class="kvantum-logo">
+                <div class="kvantum-row-2">
                     <a href="{% url 'kvants:aero-kvant-page' %}">
-                        <img alt="air_kvant" src="{% static 'img/main_page/air_kvant.jpg' %}" width=250px height=250px>
+                        <img alt="aero_kvant" src="{% static 'img/main_page/air_kvant.jpg' %}" width=250px height=250px>
                     </a>
+                    <p class="kvant-name">Аэро Квантум</p>
                 </div>
-                <div class="kvantum-logo">
+                <div class="kvantum-row-3">
                     <a href="{% url 'kvants:auto-kvant-page' %}">
                         <img alt="auto_kvant" src="{% static 'img/main_page/auto_kvant.png' %}" width=250px height=250px>
                     </a>
+                    <p class="kvant-name">Авто Квантум</p>
                 </div>
-                <div class="kvantum-logo">
+                <div class="kvantum-row-3">
                     <a href="{% url 'kvants:hi-tech-kvant-page' %}">
                         <img alt="high_tech_kvant" src="{% static 'img/main_page/high_tech_kvant.jpg' %}" width=250px height=250px>
                     </a>
+                    <p class="kvant-name">Hi-Tech Квантум</p>
                 </div>
-                <div class="kvantum-logo">
+                <div class="kvantum-row-4">
+                    <a href="{% url 'kvants:design-kvant-page' %}">
+                         <img alt="prom_design_kvant" src="{% static 'img/main_page/prom_design_kvant.png' %}" width=250px height=250px>
+                    </a>
+                    <p class="kvant-name">Промдизайн Квантум</p>
+                </div>
+                <div class="kvantum-row-4">
+                    <a href="{% url 'kvants:robo-kvant-page' %}">
+                        <img alt="prom_robo_kvant" src="{% static 'img/main_page/prom_robo_kvant.png' %}" width=250px height=250px>
+                    </a>
+                    <p class="kvant-name">Робо Квантум</p>
+                </div>
+               <div class="kvantum-row-5">
                     <a href="{% url 'kvants:design-kvant-page' %}">
                          <img alt="prom_design_kvant" src="{% static 'img/main_page/prom_design_kvant.png' %}" width=250px height=250px>
                     </a>
                 </div>
-                <div class="kvantum-logo">
+                <div class="kvantum-row-5">
                     <a href="{% url 'kvants:robo-kvant-page' %}">
                         <img alt="prom_robo_kvant" src="{% static 'img/main_page/prom_robo_kvant.png' %}" width=250px height=250px>
                     </a>
@@ -56,547 +71,7 @@
            </div>
         </div>
         <div class="item">
-          <div class="kvantums-list">
-                <div class="kvantums-heading">
-                    <h1>Расписание</h1>
-                </div>
-                <div class="kvantum-logo">
-                    <img alt="it_kvant" src="{% static 'img/main_page/it_kvant.jpg' %}" width=250px height=250px>
-                </div>
-                <div class="kvantum-logo">
-                    <img alt="air_kvant" src="{% static 'img/main_page/air_kvant.jpg' %}" width=250px height=250px>
-                </div>
-                <div class="kvantum-logo">
-                    <img alt="auto_kvant" src="{% static 'img/main_page/auto_kvant.png' %}" width=250px height=250px>
-                </div>
-                <div class="kvantum-logo">
-                    <img alt="high_tech_kvant" src="{% static 'img/main_page/high_tech_kvant.jpg' %}" width=250px height=250px>
-                </div>
-                <div class="kvantum-logo">
-                    <img alt="prom_design_kvant" src="{% static 'img/main_page/prom_design_kvant.png' %}" width=250px height=250px>
-                </div>
-                <div class="kvantum-logo">
-                    <img alt="prom_robo_kvant" src="{% static 'img/main_page/prom_robo_kvant.png' %}" width=250px height=250px>
-                </div>
-              <div id="timetable-it">
-                    <div class="col-xs-12 col-md-12">
-                            <p class="text-center pb-2"></p>
-                            <div class="table-responsive table-sm content">
-                            <table class="table table-bordered " style="height: 382px;">
-                            <thead class="thead-light">
-                            <tr style="height: 18px;">
-                            <th style="width: 85px; height: 18px;">Время</th>
-                            <th style="width: 99px; height: 18px;">Понедельник</th>
-                            <th style="width: 99px; height: 18px;">Вторник</th>
-                            <th style="width: 121px; height: 18px;">Среда</th>
-                            <th style="width: 121px; height: 18px;">Четверг</th>
-                            <th style="width: 109px; height: 18px;">Пятница</th>
-                            <th style="width: 117px; height: 18px;">Суббота</th>
-                            <th style="width: 109px; height: 18px;">Воскресенье</th>
-                            </tr>
-                            </thead>
-                            <tbody>
-                            <tr style="height: 40px;">
-                            <th style="width: 85px; height: 40px;">08:30-09:10,<br>09:20-10:00</th>
-                            <td style="width: 99px; height: 40px;">&nbsp;</td>
-                            <td style="width: 99px; text-align: center; height: 40px;">&nbsp;</td>
-                            <td style="width: 121px; text-align: center; height: 40px;"><strong>IT-12</strong><br>Умная электроника<br>(Middle)</td>
-                            <td style="width: 121px; text-align: center; height: 40px;"><strong>IT-В2</strong><br><a title="Программирование мира Minecraft на языке Python" href="https://robo74.ru/kvantorium/kursy-dlya-detey/it/programmirovanie-mira-minecraft-na-yazyke-python" target="_blank" rel="noopener">Программируем&nbsp;<br>свой мир&nbsp;<br>в Minecraft</a></td>
-                            <td style="width: 109px; text-align: center; height: 40px;">&nbsp;</td>
-                            <td style="width: 117px; text-align: center; height: 40px;">&nbsp;</td>
-                            <td style="width: 109px; height: 40px;">
-                            <p style="text-align: center;"><strong>IT-П3</strong></p>
-                            </td>
-                            </tr>
-                            <tr style="height: 54px;">
-                            <th style="width: 85px; height: 54px;">10:10-10:50,<br>11:00-11:40</th>
-                            <td style="text-align: center; width: 99px; height: 54px;"><strong>IT-В1</strong><br>Электроника для начинающих</td>
-                            <td style="text-align: center; width: 99px; height: 54px;"><strong>IT-В2</strong><br><a title="Программирование мира Minecraft на языке Python" href="https://robo74.ru/kvantorium/kursy-dlya-detey/it/programmirovanie-mira-minecraft-na-yazyke-python" target="_blank" rel="noopener">Программируем <br>свой мир<br>в Minecraft</a></td>
-                            <td style="text-align: center; width: 121px; height: 54px;"><strong>IT-В1</strong><br>Электроника для начинающих</td>
-                            <td style="text-align: center; width: 121px; height: 54px;"><strong>IT-6</strong><br><a title="Умная электроника (Junior)" href="https://robo74.ru/kvantorium/kursy-dlya-detey/it/umnaya-elektronika-junior" target="_blank" rel="noopener">Умная <br>электроника <br>(Junior)</a></td>
-                            <td style="text-align: center; width: 109px; height: 54px;">&nbsp;</td>
-                            <td style="text-align: center; width: 117px; height: 54px;"><strong>IT-4</strong><br><a title="Python. Знакомство с программированием" href="https://robo74.ru/kvantorium/kursy-dlya-detey/it/python-znakomstvo-s-programmirovaniem" target="_blank" rel="noopener">Python.&nbsp;<br>Знакомство с&nbsp;<br>программированием</a></td>
-                            <td style="text-align: center; width: 109px; height: 54px;"><strong>IT-П4</strong></td>
-                            </tr>
-                            <tr style="height: 54px;">
-                            <th style="width: 85px; height: 54px;">11:50-12:30,<br>12:40-13.20</th>
-                            <td style="width: 99px; height: 54px;">&nbsp;</td>
-                            <td style="width: 99px; height: 54px;">&nbsp;</td>
-                            <td style="width: 121px; height: 54px;">&nbsp;</td>
-                            <td style="width: 121px; height: 54px;">&nbsp;</td>
-                            <td style="width: 109px; height: 54px;">&nbsp;</td>
-                            <td style="width: 117px; height: 54px; text-align: center;"><strong>Школа 48 - гр. 2</strong><br>Обзорная</td>
-                            <td style="text-align: center; width: 109px; height: 54px;"><strong>IT-В3</strong><br>Промышленные контроллеры</td>
-                            </tr>
-                            <tr style="height: 72px;">
-                            <th style="width: 85px; height: 72px;">14:30-15:10,<br>15:20-16:00</th>
-                            <td style="text-align: center; width: 99px; height: 72px;"><strong>IT-1</strong><br><a title="Умная электроника (Junior)" href="https://robo74.ru/kvantorium/kursy-dlya-detey/it/umnaya-elektronika-junior" target="_blank" rel="noopener">Умная <br>электроника <br>(Junior)</a></td>
-                            <td style="text-align: center; width: 99px; height: 72px;"><strong>Лицей 11 - гр.1</strong></td>
-                            <td style="text-align: center; width: 121px; height: 72px;"><strong>IT-3</strong><br>Python.&nbsp;<br>Знакомство с&nbsp;<br>программированием</td>
-                            <td style="text-align: center; width: 121px; height: 72px;"><strong>IT-10</strong><br>Разработка сайтов (Middle)</td>
-                            <td style="text-align: center; width: 109px; height: 72px;"><strong>IT-5</strong><br><a title="Информационная безопасность (Junior)" href="https://robo74.ru/kvantorium/kursy-dlya-detey/it/informatsionnaya-bezopasnost-junior" target="_blank" rel="noopener">Информационная <br>безопасность <br>(Junior)</a></td>
-                            <td style="text-align: center; width: 117px; height: 72px;"><strong>IT-2</strong><br>Scratch начало</td>
-                            <td style="text-align: center; width: 109px; height: 72px;"><strong>IT-11</strong><br><a title="Информационная безопасность (Middle)" href="https://robo74.ru/kvantorium/kursy-dlya-detey/it/informatsionnaya-bezopasnost-middle" target="_blank" rel="noopener">Информационная <br>безопасность <br>(Middle)</a></td>
-                            </tr>
-                            <tr style="height: 72px;">
-                            <th style="width: 85px; height: 72px;">16:10-16:50,<br>17:00-17:40</th>
-                            <td style="text-align: center; width: 99px; height: 72px;"><strong>IT-П1</strong></td>
-                            <td style="text-align: center; width: 99px; height: 72px;">&nbsp;</td>
-                            <td style="text-align: center; width: 121px; height: 72px;"><strong>IT-8</strong><br><a title="Умная электроника (Middle)" href="https://robo74.ru/kvantorium/kursy-dlya-detey/it/umnaya-elektronika-middle" target="_blank" rel="noopener">Умная&nbsp;<br>электроника&nbsp;<br>(Middle)</a></td>
-                            <td style="text-align: center; width: 121px; height: 72px;"><strong>IT-9</strong><br><a title="Умная электроника (Разработка на линукс)" href="https://robo74.ru/kvantorium/kursy-dlya-detey/it/umnaya-elektronika-razrabotka-na-linuks" target="_blank" rel="noopener">Разработка <br>на линукс</a></td>
-                            <td style="text-align: center; width: 109px; height: 72px;"><strong>IT-П3</strong></td>
-                            <td style="text-align: center; width: 117px; height: 72px;"><strong>IT-П4</strong></td>
-                            <td style="text-align: center; width: 109px; height: 72px;"><strong>IT-В4</strong>&nbsp;<br>Уютный<br>хакерский кружок</td>
-                            </tr>
-                            <tr style="height: 72px;">
-                            <th style="width: 85px; height: 72px;">17:50-18:30,<br>18:40-19:20</th>
-                            <td style="text-align: center; width: 99px; height: 72px;"><strong>IT-В3</strong><br><a title="Промышленные контроллеры" href="https://robo74.ru/kvantorium/kursy-dlya-detey/it/promyshlennye-kontrollery" target="_blank" rel="noopener">Промышленные <br>контроллеры</a></td>
-                            <td style="text-align: center; width: 99px; height: 72px;"><strong>IT-В4</strong><br><a title="Уютный хакерский кружок" href="https://robo74.ru/kvantorium/kursy-dlya-detey/it/uyutnyy-hakerskiy-kruzhok" target="_blank" rel="noopener">Уютный <br>хакерский <br>кружок</a></td>
-                            <td style="text-align: center; width: 121px; height: 72px;">&nbsp;</td>
-                            <td style="text-align: center; width: 121px; height: 72px;"><strong>IT-7</strong><br>Разработка сайтов<br>(Junior)</td>
-                            <td style="text-align: center; width: 109px; height: 72px;">&nbsp;</td>
-                            <td style="text-align: center; width: 117px; height: 72px;"><strong>IT-В5</strong><br><a title="Scratch - легко!" href="https://robo74.ru/kvantorium/kursy-dlya-detey/it/scratch-legko" target="_blank" rel="noopener">Scratch - <br>легко!</a></td>
-                            <td style="text-align: center; width: 109px; height: 72px;"><strong>IT-В5</strong><br><a title="Scratch - легко!" href="https://robo74.ru/kvantorium/kursy-dlya-detey/it/scratch-legko" target="_blank" rel="noopener">Scratch - <br>легко!</a></td>
-                            </tr>
-                            </tbody>
-                            </table>
-                            </div>
-                            <p>ПГ - проектная группа</p>
-                    </div>
-              </div>
-              <div id="timetable-aero">
-                    <div class="col-xs-12 col-md-12">
-                          <p class="text-center pb-2"></p>
-                          <div class="table-responsive table-sm content">
-                            <table class="table table-bordered " style="height: 288px;" width="730">
-                            <thead class="thead-light">
-                            <tr style="height: 18px;">
-                            <th style="height: 18px; width: 93px;">Время</th>
-                            <th style="height: 18px; width: 102px;">Понедельник</th>
-                            <th style="height: 18px; width: 61px;">Вторник</th>
-                            <th style="height: 18px; width: 103px;">Среда</th>
-                            <th style="height: 18px; width: 63px;">Четверг</th>
-                            <th style="height: 18px; width: 90px;">Пятница</th>
-                            <th style="height: 18px; width: 66px;">Суббота</th>
-                            <th style="height: 18px; width: 100px;">Воскресенье</th>
-                            </tr>
-                            </thead>
-                            <tbody>
-                            <tr style="height: 54px;">
-                            <th style="height: 54px; width: 93px; text-align: center;">08:40-10:10</th>
-                            <td style="height: 54px; width: 102px; text-align: center;"><strong>Аэро-8</strong><br>Дроны<br>роботы</td>
-                            <td style="height: 54px; width: 61px; text-align: center;">&nbsp;</td>
-                            <td style="height: 54px; width: 103px; text-align: center;"><strong>Аэро-В1</strong><br><a href="https://robo74.ru/kvantorium/kursy-dlya-detey/aero/piloty-yak-52" target="_blank" rel="noopener">Пилоты Як-52</a></td>
-                            <td style="height: 54px; width: 63px; text-align: center;">&nbsp;</td>
-                            <td style="height: 54px; width: 90px; text-align: center;">&nbsp;</td>
-                            <td style="height: 54px; width: 66px; text-align: center;"><strong>Аэро-В1</strong><br>Пилоты Як-52</td>
-                            <td style="height: 54px; width: 100px; text-align: center;"><strong>Аэро-В2</strong><br>Гоночные<br>дроны</td>
-                            </tr>
-                            <tr style="height: 54px; text-align: center;">
-                            <th style="height: 54px; width: 93px;">10:20-11:50</th>
-                            <td style="text-align: center; height: 54px; width: 102px;"><strong>Аэро-1</strong><br><a href="https://robo74.ru/kvantorium/kursy-dlya-detey/aero/kvadrokoptery" target="_blank" rel="noopener">Квадрокоптеры</a></td>
-                            <td style="height: 54px; width: 61px;">&nbsp;</td>
-                            <td style="text-align: center; height: 54px; width: 103px;"><strong>Аэро-В2</strong><br><a title="Гоночные дроны" href="https://robo74.ru/kvantorium/kursy-dlya-detey/aero/gonochnye-drony" target="_blank" rel="noopener">Гоночные<br>дроны</a></td>
-                            <td style="height: 54px; width: 63px;">&nbsp;</td>
-                            <td style="height: 54px; width: 90px;">&nbsp;</td>
-                            <td style="height: 54px; width: 66px;"><strong>Аэро-В3</strong><br><a style="text-align: center;" href="https://robo74.ru/kvantorium/kursy-dlya-detey/aero/piloty-yak-52" target="_blank" rel="noopener">Пилоты Як-52</a></td>
-                            <td style="text-align: center; height: 54px; width: 100px;">&nbsp;</td>
-                            </tr>
-                            <tr style="height: 36px; text-align: center;">
-                            <th style="height: 36px; width: 93px;">12:00-13:30</th>
-                            <td style="height: 36px; width: 102px;">&nbsp;</td>
-                            <td style="height: 36px; width: 61px;">&nbsp;</td>
-                            <td style="height: 36px; width: 103px;">&nbsp;</td>
-                            <td style="height: 36px; width: 63px;">&nbsp;</td>
-                            <td style="height: 36px; width: 90px;">&nbsp;</td>
-                            <td style="height: 36px; width: 66px;">&nbsp;</td>
-                            <td style="text-align: center; height: 36px; width: 100px;"><strong>Аэро-3</strong><br><a href="https://robo74.ru/kvantorium/kursy-dlya-detey/aero/prom-drony">Пром-дроны</a></td>
-                            </tr>
-                            <tr style="height: 54px; text-align: center;">
-                            <th style="height: 54px; width: 93px;">14:50-16:20</th>
-                            <td style="text-align: center; height: 54px; width: 102px;"><strong>Аэро-6</strong><br><a href="https://robo74.ru/kvantorium/kursy-dlya-detey/aero/drony-roboty" target="_blank" rel="noopener">Дроны-роботы</a></td>
-                            <td style="height: 54px; width: 61px;">&nbsp;</td>
-                            <td style="text-align: center; height: 54px; width: 103px;"><strong>Аэро-7</strong><br>Дроны-роботы</td>
-                            <td style="height: 54px; width: 63px;">&nbsp;</td>
-                            <td style="text-align: center; height: 54px; width: 90px;"><strong>Аэро-В3</strong><br><a href="https://robo74.ru/kvantorium/kursy-dlya-detey/aero/piloty-yak-52" target="_blank" rel="noopener">Пилоты Як-52</a></td>
-                            <td style="text-align: center; height: 54px; width: 66px;">&nbsp;</td>
-                            <td style="text-align: center; height: 54px; width: 100px;"><strong>Аэро-5</strong><br><a href="https://robo74.ru/kvantorium/kursy-dlya-detey/aero/foto-drony" target="_blank" rel="noopener">Пром-дроны</a></td>
-                            </tr>
-                            <tr style="height: 36px; text-align: center;">
-                            <th style="height: 36px; width: 93px;">16:30-18:00</th>
-                            <td style="text-align: center; height: 36px; width: 102px;"><strong>Аэро-2</strong><br>Квадрокоптеры</td>
-                            <td style="height: 36px; width: 61px;">&nbsp;</td>
-                            <td style="height: 36px; width: 103px;">&nbsp;</td>
-                            <td style="height: 36px; width: 63px;">&nbsp;</td>
-                            <td style="text-align: center; height: 36px; width: 90px;">&nbsp;</td>
-                            <td style="text-align: center; height: 36px; width: 66px;">&nbsp;</td>
-                            <td style="height: 36px; width: 100px;">&nbsp;</td>
-                            </tr>
-                            <tr style="height: 36px;">
-                            <th style="height: 36px; width: 93px; text-align: center;">18:1019:30</th>
-                            <td style="height: 36px; width: 102px; text-align: center;">&nbsp;</td>
-                            <td style="height: 36px; width: 61px; text-align: center;">&nbsp;</td>
-                            <td style="height: 36px; width: 103px; text-align: center;">&nbsp;</td>
-                            <td style="height: 36px; width: 63px; text-align: center;">&nbsp;</td>
-                            <td style="height: 36px; width: 90px; text-align: center;">&nbsp;</td>
-                            <td style="height: 36px; width: 66px; text-align: center;"><strong>Аэро-4</strong><br>Фото<br>дроны</td>
-                            <td style="height: 36px; width: 100px; text-align: center;">&nbsp;</td>
-                            </tr>
-                            </tbody>
-                            </table>
-                            </div>
-                            <p>ПГ - проектная группа</p>
-                    </div>
-              </div>
-              <div id="timetable-auto">
-                    <div class="col-xs-12 col-md-12">
-                              <p class="text-center pb-2"></p>
-                              <div class="table-responsive table-sm content">
-                        <table class="table table-bordered " style="height: 270px;">
-                        <thead class="thead-light">
-                        <tr style="height: 18px;">
-                        <th style="width: 85px; height: 18px;">Время</th>
-                        <th style="width: 90px; height: 18px;">Понедельник</th>
-                        <th style="width: 91px; height: 18px;">Вторник</th>
-                        <th style="width: 42px; height: 18px;">Среда</th>
-                        <th style="width: 79px; height: 18px;">Четверг</th>
-                        <th style="width: 58px; height: 18px;">Пятница</th>
-                        <th style="width: 106px; height: 18px;">Суббота</th>
-                        <th style="width: 127px; height: 18px;">Воскресенье</th>
-                        </tr>
-                        </thead>
-                        <tbody>
-                        <tr style="height: 36px;">
-                        <th style="width: 85px; height: 36px;">08:40-11:50</th>
-                        <td style="width: 90px; height: 36px;">&nbsp;</td>
-                        <td style="text-align: center; width: 91px; height: 36px;">&nbsp;</td>
-                        <td style="width: 42px; height: 36px;">&nbsp;</td>
-                        <td style="width: 79px; height: 36px;">&nbsp;</td>
-                        <td style="width: 58px; height: 36px;">&nbsp;</td>
-                        <td style="width: 106px; height: 36px;">&nbsp;</td>
-                        <td style="width: 127px; height: 36px;">&nbsp;</td>
-                        </tr>
-                        <tr style="height: 54px;">
-                        <th style="width: 85px; height: 54px;">10:20-11:50</th>
-                        <td style="width: 90px; height: 54px;">&nbsp;</td>
-                        <td style="text-align: center; width: 91px; height: 54px;"><strong>Авто-В1</strong><br><a title="Гоночные RC автомобили" href="https://robo74.ru/kvantorium/kursy-dlya-detey/avto/gonochnye-rc-avtomobili" target="_blank" rel="noopener">Гоночные <br>RC автомобили</a></td>
-                        <td style="width: 42px; height: 54px;">&nbsp;</td>
-                        <td style="text-align: center; width: 79px; height: 54px;"><strong>Авто-2</strong><br><a href="https://robo74.ru/kvantorium/kursy-dlya-detey/avto/avtomaniya" target="_blank" rel="noopener">Автомания</a></td>
-                        <td style="width: 58px; height: 54px;">&nbsp;</td>
-                        <td style="text-align: center; width: 106px; height: 54px;"><strong>Авто-В1</strong><br><a title="Гоночные RC автомобили" href="https://robo74.ru/kvantorium/kursy-dlya-detey/avto/gonochnye-rc-avtomobili" target="_blank" rel="noopener">Гоночные <br>RC автомобили</a></td>
-                        <td style="width: 127px; text-align: center; height: 54px;"><strong>Авто-4</strong><br><a style="text-align: center;" title="Человек и машина" href="https://robo74.ru/kvantorium/kursy-dlya-detey/avto/chelovek-i-mashina" target="_blank" rel="noopener">Человек и&nbsp;<br>машина</a></td>
-                        </tr>
-                        <tr style="height: 54px;">
-                        <th style="width: 85px; height: 54px;">12:00-13.30</th>
-                        <td style="width: 90px; height: 54px;">&nbsp;</td>
-                        <td style="width: 91px; height: 54px;">&nbsp;</td>
-                        <td style="width: 42px; height: 54px;">&nbsp;</td>
-                        <td style="width: 79px; height: 54px;">&nbsp;</td>
-                        <td style="width: 58px; height: 54px;">&nbsp;</td>
-                        <td style="width: 106px; text-align: center; height: 54px;"><strong>Школа 48- Гр. 1</strong><br>&nbsp;Обзорная<br>Школа 48</td>
-                        <td style="text-align: center; width: 127px; height: 54px;"><strong>Авто-П1</strong></td>
-                        </tr>
-                        <tr style="height: 36px;">
-                        <th style="width: 85px; height: 36px;">14:40-16:10</th>
-                        <td style="width: 90px; height: 36px;">&nbsp;</td>
-                        <td style="text-align: center; width: 91px; height: 36px;"><strong>Авто-1</strong><br><a href="https://robo74.ru/kvantorium/kursy-dlya-detey/avto/avtomaniya" target="_blank" rel="noopener">Автомания</a></td>
-                        <td style="width: 42px; height: 36px;">&nbsp;</td>
-                        <td style="text-align: center; width: 79px; height: 36px;"><strong>Авто-3</strong><br><a href="https://robo74.ru/kvantorium/kursy-dlya-detey/avto/avtomaniya" target="_blank" rel="noopener">Автомания</a></td>
-                        <td style="width: 58px; height: 36px;">&nbsp;</td>
-                        <td style="text-align: center; width: 106px; height: 36px;">&nbsp;</td>
-                        <td style="text-align: center; width: 127px; height: 36px;">&nbsp;</td>
-                        </tr>
-                        <tr style="height: 36px;">
-                        <th style="width: 85px; height: 36px;">16:20-17:50</th>
-                        <td style="width: 90px; height: 36px;">&nbsp;</td>
-                        <td style="text-align: center; width: 91px; height: 36px;"><strong>Авто-6</strong><br><a href="https://robo74.ru/kvantorium/kursy-dlya-detey/avto/enerdzhikar" target="_blank" rel="noopener">ЭнЭрДжиКар</a></td>
-                        <td style="width: 42px; height: 36px;">&nbsp;</td>
-                        <td style="text-align: center; width: 79px; height: 36px;"><strong>Авто-5</strong><br><a href="https://robo74.ru/kvantorium/kursy-dlya-detey/avto/avtomaniya" target="_blank" rel="noopener">Человек и машина</a></td>
-                        <td style="width: 58px; height: 36px;">&nbsp;</td>
-                        <td style="text-align: center; width: 106px; height: 36px;">&nbsp;</td>
-                        <td style="text-align: center; width: 127px; height: 36px;">&nbsp;</td>
-                        </tr>
-                        <tr style="height: 36px;">
-                        <th style="width: 85px; height: 36px;">18:00-19:30</th>
-                        <td style="width: 90px; height: 36px;">&nbsp;</td>
-                        <td style="text-align: center; width: 91px; height: 36px;">
-                        <p><strong>Авто-П1</strong></p>
-                        </td>
-                        <td style="width: 42px; height: 36px;">&nbsp;</td>
-                        <td style="text-align: center; width: 79px; height: 36px;">&nbsp;</td>
-                        <td style="width: 58px; height: 36px;">&nbsp;</td>
-                        <td style="text-align: center; width: 106px; height: 36px;">&nbsp;</td>
-                        <td style="text-align: center; width: 127px; height: 36px;">&nbsp;</td>
-                        </tr>
-                        </tbody>
-                        </table>
-                        </div>
-                    </div>
-              </div>
-              <div id="timetable-hi-tech">
-                    <div class="col-xs-12 col-md-12">
-                              <p class="text-center pb-2"></p>
-                              <div class="table-responsive table-sm content">
-                        <table class="table table-bordered " style="height: 234px;">
-                        <thead class="thead-light">
-                        <tr style="height: 18px;">
-                        <th style="height: 18px; width: 81px;">Время</th>
-                        <th style="height: 18px; width: 86px;">Понедельник</th>
-                        <th style="height: 18px; width: 140px;">Вторник</th>
-                        <th style="height: 18px; width: 137px;">Среда</th>
-                        <th style="height: 18px; width: 122px;">Четверг</th>
-                        <th style="height: 18px; width: 140px;">Пятница</th>
-                        <th style="height: 18px; width: 135px;">Суббота</th>
-                        <th style="height: 18px; width: 154px;">Воскресенье</th>
-                        </tr>
-                        </thead>
-                        <tbody>
-                        <tr style="height: 36px;">
-                        <th style="height: 36px; width: 81px;">08:50-10:20</th>
-                        <td style="height: 36px; width: 86px; text-align: center;">&nbsp;</td>
-                        <td style="height: 36px; width: 140px; text-align: center;">&nbsp;</td>
-                        <td style="height: 36px; width: 137px; text-align: center;">&nbsp;</td>
-                        <td style="height: 36px; width: 122px; text-align: center;">&nbsp;</td>
-                        <td style="height: 36px; width: 140px; text-align: center;">&nbsp;</td>
-                        <td style="width: 135px; height: 36px; text-align: center;">&nbsp;</td>
-                        <td style="height: 36px; width: 154px; text-align: center;">&nbsp;</td>
-                        </tr>
-                        <tr style="height: 36px; text-align: center;">
-                        <th style="height: 36px; width: 81px;">10:30-12:00</th>
-                        <td style="text-align: center; height: 36px; width: 86px;">&nbsp;</td>
-                        <td style="height: 36px; width: 140px;">&nbsp;</td>
-                        <td style="height: 36px; width: 137px;">&nbsp;</td>
-                        <td style="text-align: center; height: 36px; width: 122px;">&nbsp;</td>
-                        <td style="height: 36px; width: 140px;">&nbsp;</td>
-                        <td style="text-align: center; height: 36px; width: 135px;">&nbsp;</td>
-                        <td style="height: 36px; width: 154px;"><strong>Робо-П1</strong></td>
-                        </tr>
-                        <tr style="height: 36px; text-align: center;">
-                        <th style="height: 36px; width: 81px;">12:10-13:40</th>
-                        <td style="height: 36px; width: 86px;">&nbsp;</td>
-                        <td style="height: 36px; width: 140px;">&nbsp;</td>
-                        <td style="height: 36px; width: 137px;">&nbsp;</td>
-                        <td style="height: 36px; width: 122px;">&nbsp;</td>
-                        <td style="height: 36px; width: 140px;">&nbsp;</td>
-                        <td style="text-align: center; height: 36px; width: 135px;">&nbsp;</td>
-                        <td style="text-align: center; height: 36px; width: 154px;">&nbsp;</td>
-                        </tr>
-                        <tr style="height: 36px; text-align: center;">
-                        <th style="height: 36px; width: 81px;">14:50-16:20</th>
-                        <td style="text-align: center; height: 36px; width: 86px;">&nbsp;</td>
-                        <td style="height: 36px; width: 140px;"><strong>Лицей 11 Гр.3</strong><br>Лицей 11&nbsp;<br>(обзор)</td>
-                        <td style="height: 36px; width: 137px;">&nbsp;</td>
-                        <td style="text-align: center; height: 36px; width: 122px;">&nbsp;</td>
-                        <td style="height: 36px; width: 140px;"><strong>Хайтек-2</strong><br><a style="text-align: center;" href="https://robo74.ru/kvantorium/kursy-dlya-detey/haytek/stanki-s-chpu" target="_blank" rel="noopener">Станки с ЧПУ</a></td>
-                        <td style="text-align: center; height: 36px; width: 135px;"><strong>Хайтек-П1</strong><br>Авиамоделирование</td>
-                        <td style="text-align: center; height: 36px; width: 154px;"><strong>Хайтек-П1</strong><br>Авиамоделирование</td>
-                        </tr>
-                        <tr style="height: 36px; text-align: center;">
-                        <th style="height: 36px; width: 81px;">16:30-18:00</th>
-                        <td style="text-align: center; height: 36px; width: 86px;">&nbsp;</td>
-                        <td style="height: 36px; width: 140px;"><strong>Хайтек-1</strong><br><a style="text-align: center;" href="https://robo74.ru/kvantorium/kursy-dlya-detey/haytek/haitek" target="_blank" rel="noopener">ХайТек</a></td>
-                        <td style="height: 36px; width: 137px;"><strong>Хайтек-В1</strong><br><a style="text-align: center;" href="https://robo74.ru/kvantorium/kursy-dlya-detey/haytek/modelirovanie-v-solidworks" target="_blank" rel="noopener">Моделирование в SolidWorks</a></td>
-                        <td style="text-align: center; height: 36px; width: 122px;">&nbsp;</td>
-                        <td style="height: 36px; width: 140px;">&nbsp;</td>
-                        <td style="text-align: center; height: 36px; width: 135px;"><strong>IT-В6</strong><br><a href="https://robo74.ru/kvantorium/kursy-dlya-detey/it/osnovy-programmirovaniya-na-yazyke-python" target="_blank" rel="noopener">Python</a></td>
-                        <td style="text-align: center; height: 36px; width: 154px;"><strong>IT-В6</strong><br>Python</td>
-                        </tr>
-                        <tr style="height: 36px;">
-                        <th style="height: 36px; width: 81px; text-align: center;">18:10-19:40</th>
-                        <td style="height: 36px; width: 86px; text-align: center;">&nbsp;</td>
-                        <td style="height: 36px; width: 140px; text-align: center;"><strong>Хайтек-В2</strong><br><a style="text-align: center;" href="https://robo74.ru/kvantorium/kursy-dlya-detey/haytek/solidworks-professionalu" target="_blank" rel="noopener">SolidWorks профессионалу</a></td>
-                        <td style="height: 36px; width: 137px; text-align: center;">&nbsp;</td>
-                        <td style="height: 36px; width: 122px; text-align: center;"><strong>Хайтек-В1</strong><br><a style="text-align: center;" href="https://robo74.ru/kvantorium/kursy-dlya-detey/haytek/modelirovanie-v-solidworks" target="_blank" rel="noopener">Моделирование <br>в SolidWorks</a></td>
-                        <td style="height: 36px; width: 140px; text-align: center;"><strong>Хайтек-В2</strong><br><a style="text-align: center;" href="https://robo74.ru/kvantorium/kursy-dlya-detey/haytek/solidworks-professionalu" target="_blank" rel="noopener">SolidWorks профессионалу</a></td>
-                        <td style="height: 36px; width: 135px; text-align: center;">&nbsp;</td>
-                        <td style="height: 36px; width: 154px; text-align: center;">&nbsp;</td>
-                        </tr>
-                        </tbody>
-                        </table>
-                        </div>
-                        <p>ПГ - проектная группа</p>
-                    </div>
-              </div>
-              <div id="timetable-prom-design">
-                    <div class="col-xs-12 col-md-12">
-                              <p class="text-center pb-2"></p>
-                              <div class="table-responsive table-sm content">
-                        <table class="table table-bordered " style="height: 264px;" width="881">
-                        <thead class="thead-light">
-                        <tr style="height: 18px;">
-                        <th style="width: 84px; height: 18px;">Время</th>
-                        <th style="width: 140px; height: 18px;">Понедельник</th>
-                        <th style="width: 137px; height: 18px;">Вторник</th>
-                        <th style="width: 107px; height: 18px;">Среда</th>
-                        <th style="width: 94px; height: 18px;">Четверг</th>
-                        <th style="width: 87px; height: 18px;">Пятница</th>
-                        <th style="width: 62px; height: 18px;">Суббота</th>
-                        <th style="width: 118px; height: 18px;">Воскресенье</th>
-                        </tr>
-                        </thead>
-                        <tbody>
-                        <tr style="height: 54px;">
-                        <th style="width: 84px; height: 54px;">08:50-10:20</th>
-                        <td style="width: 140px; height: 54px;">&nbsp;</td>
-                        <td style="text-align: center; width: 137px; height: 54px;"><strong>Пром-В1</strong><br><a href="https://robo74.ru/kvantorium/kursy-dlya-detey/promdizayn/mir-3d" target="_blank" rel="noopener">Мир 3D</a></td>
-                        <td style="width: 107px; height: 54px; text-align: center;"><strong>Пром-1</strong><br><a style="text-align: center;" href="https://robo74.ru/kvantorium/kursy-dlya-detey/promdizayn/elementarnyy-dizayn" target="_blank" rel="noopener">Элементарный дизайн</a></td>
-                        <td style="width: 94px; height: 54px;">&nbsp;</td>
-                        <td style="text-align: center; width: 87px; height: 54px;"><strong>Пром-В1</strong><br><a href="https://robo74.ru/kvantorium/kursy-dlya-detey/promdizayn/mir-3d" target="_blank" rel="noopener">Мир 3D</a></td>
-                        <td style="width: 62px; height: 54px;">&nbsp;</td>
-                        <td style="text-align: center; width: 118px; height: 54px;"><strong>Пром-П1</strong></td>
-                        </tr>
-                        <tr style="height: 36px;">
-                        <th style="width: 84px; height: 52px;">10:30-12:00</th>
-                        <td style="width: 140px; height: 52px; text-align: center;">&nbsp;</td>
-                        <td style="width: 137px; height: 52px; text-align: center;"><strong>Пром-2</strong><br><a href="https://robo74.ru/kvantorium/kursy-dlya-detey/promdizayn/elementarnyy-dizayn" target="_blank" rel="noopener">Элементарный дизайн</a></td>
-                        <td style="width: 107px; height: 52px; text-align: center;"><strong>Пром-В2</strong><br><a href="https://robo74.ru/kvantorium/kursy-dlya-detey/promdizayn/mir-3d" target="_blank" rel="noopener">Мир 3D</a></td>
-                        <td style="width: 94px; height: 52px; text-align: center;">&nbsp;</td>
-                        <td style="width: 87px; height: 52px; text-align: center;"><strong>Пром-В2</strong><br><a href="https://robo74.ru/kvantorium/kursy-dlya-detey/promdizayn/mir-3d" target="_blank" rel="noopener">Мир 3D</a></td>
-                        <td style="width: 62px; height: 52px; text-align: center;">&nbsp;</td>
-                        <td style="width: 118px; height: 52px; text-align: center;"><strong>Пром-П2</strong></td>
-                        </tr>
-                        <tr style="height: 36px; text-align: center;">
-                        <th style="width: 84px; height: 36px;">12:10-13:40</th>
-                        <td style="width: 140px; height: 36px;">&nbsp;</td>
-                        <td style="width: 137px; height: 36px;">&nbsp;</td>
-                        <td style="width: 107px; height: 36px;">&nbsp;</td>
-                        <td style="width: 94px; height: 36px;">&nbsp;</td>
-                        <td style="width: 87px; height: 36px;">&nbsp;</td>
-                        <td style="width: 62px; height: 36px;">&nbsp;</td>
-                        <td style="text-align: center; width: 118px; height: 36px;"><strong>Пром-9</strong><br><a href="https://robo74.ru/kvantorium/kursy-dlya-detey/promdizayn/perspektivnyy-dizayn" target="_blank" rel="noopener">Перспективный дизайн</a></td>
-                        </tr>
-                        <tr style="height: 36px; text-align: center;">
-                        <th style="width: 84px; height: 36px;">14:50-16:20</th>
-                        <td style="text-align: center; width: 140px; height: 36px;"><strong>Пром-П1</strong></td>
-                        <td style="text-align: center; width: 137px; height: 36px;"><strong>Пром-В3</strong><br><a href="https://robo74.ru/kvantorium/kursy-dlya-detey/promdizayn/mir-grafiki" target="_blank" rel="noopener">Мир графики</a></td>
-                        <td style="text-align: center; width: 107px; height: 36px;"><strong>Пром-8</strong><br><a href="https://robo74.ru/kvantorium/kursy-dlya-detey/promdizayn/bazovyy-dizayn" target="_blank" rel="noopener">Перспективный дизайн</a></td>
-                        <td style="width: 94px; height: 36px;"><strong>Пром-В3</strong><br><a href="https://robo74.ru/kvantorium/kursy-dlya-detey/promdizayn/mir-grafiki" target="_blank" rel="noopener">Мир графики</a></td>
-                        <td style="text-align: center; width: 87px; height: 36px;"><strong>Школа 68</strong></td>
-                        <td style="width: 62px; height: 36px;">&nbsp;</td>
-                        <td style="text-align: center; width: 118px; height: 36px;"><strong>Пром-4</strong><br><a href="https://robo74.ru/kvantorium/kursy-dlya-detey/promdizayn/bazovyy-dizayn" target="_blank" rel="noopener">Базовый дизайн</a></td>
-                        </tr>
-                        <tr style="height: 36px; text-align: center;">
-                        <th style="width: 84px; height: 11px;">16:30-18:00</th>
-                        <td style="text-align: center; width: 140px; height: 11px;"><strong>Пром-П6</strong><br><a href="https://robo74.ru/kvantorium/kursy-dlya-detey/promdizayn/realnyy-dizayn" target="_blank" rel="noopener">Реальный дизайн</a></td>
-                        <td style="text-align: center; width: 137px; height: 11px;"><strong>Пром-П2</strong></td>
-                        <td style="text-align: center; width: 107px; height: 11px;"><strong>Пром-7</strong><br><a href="https://robo74.ru/kvantorium/kursy-dlya-detey/promdizayn/realnyy-dizayn" target="_blank" rel="noopener">Реальный дизайн</a></td>
-                        <td style="width: 94px; height: 11px;">
-                        <p><strong>Пром-П3</strong></p>
-                        <p>Школа 101</p>
-                        </td>
-                        <td style="text-align: center; width: 87px; height: 11px;">&nbsp;</td>
-                        <td style="width: 62px; height: 11px;"><strong>ЧТПЗ</strong></td>
-                        <td style="text-align: center; width: 118px; height: 11px;"><strong>ЧТПЗ</strong></td>
-                        </tr>
-                        <tr style="height: 36px;">
-                        <th style="width: 84px; height: 57px; text-align: center;">18:10-19:40</th>
-                        <td style="width: 140px; height: 57px; text-align: center;"><strong>Пром-3</strong><br><a href="https://robo74.ru/kvantorium/kursy-dlya-detey/promdizayn/bazovyy-dizayn" target="_blank" rel="noopener">Базовый дизайн</a></td>
-                        <td style="width: 137px; height: 57px; text-align: center;"><strong>Пром-В4</strong><br><a href="https://robo74.ru/kvantorium/kursy-dlya-detey/promdizayn/mir-grafiki" target="_blank" rel="noopener">Мир графики</a></td>
-                        <td style="width: 107px; height: 57px; text-align: center;"><strong>Пром-В4</strong><br><a href="https://robo74.ru/kvantorium/kursy-dlya-detey/promdizayn/mir-grafiki" target="_blank" rel="noopener">Мир графики</a></td>
-                        <td style="width: 94px; height: 57px; text-align: center;"><strong>Пром-5</strong><br><a href="https://robo74.ru/kvantorium/kursy-dlya-detey/promdizayn/bazovyy-dizayn" target="_blank" rel="noopener">Базовый дизайн</a></td>
-                        <td style="width: 87px; height: 57px; text-align: center;">&nbsp;</td>
-                        <td style="width: 62px; height: 57px; text-align: center;">&nbsp;</td>
-                        <td style="width: 118px; height: 57px; text-align: center;">&nbsp;</td>
-                        </tr>
-                        </tbody>
-                        </table>
-                        </div>
-                        <p>ПГ - проектная группа</p>
-                    </div>
-              </div>
-              <div id="timetable-prom-robo">
-                    <div class="col-xs-12 col-md-12">
-                              <p class="text-center pb-2"></p>
-                              <div class="table-responsive table-sm content">
-                        <table class="table table-bordered " style="width: 735px; height: 458px;">
-                        <thead class="thead-light">
-                        <tr style="height: 18px;">
-                        <th style="width: 41px; height: 18px;">Время</th>
-                        <th style="width: 93px; height: 18px;">Понедельник</th>
-                        <th style="width: 66px; height: 18px;">Вторник</th>
-                        <th style="width: 85px; height: 18px;">Среда</th>
-                        <th style="width: 86px; height: 18px;">Четверг</th>
-                        <th style="width: 108px; height: 18px;">Пятница</th>
-                        <th style="width: 107px; height: 18px;">Суббота</th>
-                        <th style="width: 97px; height: 18px;">Воскресенье</th>
-                        </tr>
-                        </thead>
-                        <tbody>
-                        <tr style="height: 76px;">
-                        <th style="width: 41px; height: 76px;">08:30-10:00</th>
-                        <td style="text-align: center; width: 93px; height: 76px;">
-                        <p><strong>Робо-В1<br></strong><a title="Введение в робототехнику" href="https://robo74.ru/kvantorium/kursy-dlya-detey/promrobo/nachalnaya-robototehnika" target="_blank" rel="noopener">Начальная робототехника</a></p>
-                        </td>
-                        <td style="text-align: center; width: 66px; height: 76px;"><strong>Робо-В5</strong><br><a title="Введение в робототехнику" href="https://robo74.ru/kvantorium/kursy-dlya-detey/promrobo/mobilnye-roboty" target="_blank" rel="noopener">Мобильные роботы</a></td>
-                        <td style="text-align: center; width: 85px; height: 76px;"><strong>Робо-В1</strong><br><a title="Начало пути" href="https://robo74.ru/kvantorium/kursy-dlya-detey/promrobo/nachalnaya-robototehnika" target="_blank" rel="noopener">Начальная робототехника</a></td>
-                        <td style="text-align: center; width: 86px; height: 76px;"><strong>Робо-В3</strong><br><a title="Введение в робототехнику" href="https://robo74.ru/kvantorium/kursy-dlya-detey/promrobo/klub-yunyh-inzhenerov" target="_blank" rel="noopener">Клуб юных инженеров</a></td>
-                        <td style="text-align: center; width: 108px; height: 76px;">
-                        <p><strong>Робо-В3</strong><br><a title="Введение в робототехнику" href="https://robo74.ru/kvantorium/kursy-dlya-detey/promrobo/klub-yunyh-inzhenerov" target="_blank" rel="noopener">Клуб юных инженеров</a></p>
-                        </td>
-                        <td style="text-align: center; width: 107px; height: 76px;"><strong>Робо-В2</strong><br><a title="Начало пути" href="https://robo74.ru/kvantorium/kursy-dlya-detey/promrobo/nachalnaya-robototehnika" target="_blank" rel="noopener">Начальная робототехника</a></td>
-                        <td style="text-align: center; width: 97px; height: 76px;"><strong>Робо-В5</strong><br><a href="https://robo74.ru/kvantorium/kursy-dlya-detey/promrobo/mobilnye-roboty" target="_blank" rel="noopener">Мобильные роботы</a></td>
-                        </tr>
-                        <tr style="height: 76px;">
-                        <th style="width: 41px; height: 76px;">10:10-11:40</th>
-                        <td style="text-align: center; width: 93px; height: 76px;"><strong>Робо-1</strong><br><a title="Введение в робототехнику" href="https://robo74.ru/kvantorium/kursy-dlya-detey/promrobo/vvedenie-v-robototehniku" target="_blank" rel="noopener">Введение в <br>робототехнику</a></td>
-                        <td style="text-align: center; width: 66px; height: 76px;"><strong>Робо-В4</strong><br><a title="Начало пути" href="https://robo74.ru/kvantorium/kursy-dlya-detey/promrobo/klub-yunyh-inzhenerov" target="_blank" rel="noopener">Клуб юных инженеров</a></td>
-                        <td style="text-align: center; width: 85px; height: 76px;"><strong>Робо-В2</strong><br><a href="https://robo74.ru/kvantorium/kursy-dlya-detey/promrobo/nachalnaya-robototehnika" target="_blank" rel="noopener">Начальная робототехника</a></td>
-                        <td style="text-align: center; width: 86px; height: 76px;">
-                        <p><strong>Робо-В4</strong><br><a href="https://robo74.ru/kvantorium/kursy-dlya-detey/promrobo/klub-yunyh-inzhenerov">Клуб юных инженеров</a></p>
-                        </td>
-                        <td style="text-align: center; width: 108px; height: 76px;"><strong>Робо-В6</strong><br><a href="https://robo74.ru/kvantorium/kursy-dlya-detey/promrobo/akademiya-robotov" target="_blank" rel="noopener">Академия<br>роботов</a></td>
-                        <td style="text-align: center; width: 107px; height: 76px;"><strong>Робо-6</strong><br><a title="Начало пути" href="https://robo74.ru/kvantorium/kursy-dlya-detey/promrobo/vvedenie-v-robototehniku" target="_blank" rel="noopener">Введение в робототехнику</a></td>
-                        <td style="text-align: center; width: 97px; height: 76px;"><strong>Робо-В6</strong><br><a href="https://robo74.ru/kvantorium/kursy-dlya-detey/promrobo/akademiya-robotov" target="_blank" rel="noopener">Академия<br>роботов</a></td>
-                        </tr>
-                        <tr style="height: 72px;">
-                        <th style="width: 41px; height: 72px;">11:50-13.20</th>
-                        <td style="width: 93px; height: 72px;">&nbsp;</td>
-                        <td style="width: 66px; height: 72px;">&nbsp;</td>
-                        <td style="width: 85px; height: 72px;">&nbsp;</td>
-                        <td style="width: 86px; height: 72px;">&nbsp;</td>
-                        <td style="width: 108px; height: 72px;">&nbsp;</td>
-                        <td style="width: 107px; text-align: center; height: 72px;"><strong>Робо-П1</strong></td>
-                        <td style="text-align: center; width: 97px; height: 72px;"><strong>Робо-П2</strong></td>
-                        </tr>
-                        <tr style="height: 72px;">
-                        <th style="width: 41px; height: 72px;">14:30-16:00</th>
-                        <td style="text-align: center; width: 93px; height: 72px;"><strong>Робо-4</strong><br><a href="https://robo74.ru/kvantorium/kursy-dlya-detey/promrobo/manipulyatory">Манипуляторы</a></td>
-                        <td style="text-align: center; width: 66px; height: 72px;"><strong>Лицей 11 - Гр.2</strong></td>
-                        <td style="text-align: center; width: 85px; height: 72px;"><strong>Робо-3</strong><br><a href="https://robo74.ru/kvantorium/kursy-dlya-detey/promrobo/laboratoriya-robotov">Лаборатория&nbsp;</a><br><a href="https://robo74.ru/kvantorium/kursy-dlya-detey/promrobo/laboratoriya-robotov">роботов</a></td>
-                        <td style="text-align: center; width: 86px; height: 72px;"><strong>Лицей 11 - Гр.4</strong></td>
-                        <td style="text-align: center; width: 108px; height: 72px;"><strong>Робо-10</strong><br><a href="https://robo74.ru/kvantorium/kursy-dlya-detey/promrobo/sovremennaya-robototehnika" target="_blank" rel="noopener">Современная <br>робототехника</a></td>
-                        <td style="text-align: center; width: 107px; height: 72px;"><strong>Робо-П3</strong></td>
-                        <td style="text-align: center; width: 97px; height: 72px;"><strong>Робо-2</strong><br><a href="https://robo74.ru/kvantorium/kursy-dlya-detey/promrobo/nachalo-puti">Начало&nbsp;</a><br><a href="https://robo74.ru/kvantorium/kursy-dlya-detey/promrobo/nachalo-puti">пути</a></td>
-                        </tr>
-                        <tr style="height: 72px;">
-                        <th style="width: 41px; height: 72px;">16:10-17:40</th>
-                        <td style="text-align: center; width: 93px; height: 72px;">&nbsp;</td>
-                        <td style="width: 66px; height: 72px;">&nbsp;</td>
-                        <td style="text-align: center; width: 85px; height: 72px;"><strong>Робо-П2</strong></td>
-                        <td style="text-align: center; width: 86px; height: 72px;"><strong>Робо-9</strong><br><a href="https://robo74.ru/kvantorium/kursy-dlya-detey/promrobo/prodvinutaya-robototehnika">Продвинутая робототехника</a></td>
-                        <td style="text-align: center; width: 108px; height: 72px;"><strong>Робо-8</strong><br><a href="https://robo74.ru/kvantorium/kursy-dlya-detey/promrobo/sorevnovatelnaya-robototehnika" target="_blank" rel="noopener">Соревновательная <br>робототехника</a></td>
-                        <td style="text-align: center; width: 107px; height: 72px;"><strong>Робо-7</strong><br><a href="https://robo74.ru/kvantorium/kursy-dlya-detey/promrobo/sorevnovatelnaya-robototehnika-junior" target="_blank" rel="noopener">Соревновательная <br>робототехника <br>(Junior)</a></td>
-                        <td style="text-align: center; width: 97px; height: 72px;"><strong>Робо-П3</strong></td>
-                        </tr>
-                        <tr style="height: 72px;">
-                        <th style="width: 41px; height: 72px;">17:50-19:20</th>
-                        <td style="text-align: center; width: 93px; height: 72px;"><strong>Англ-1</strong></td>
-                        <td style="text-align: center; width: 66px; height: 72px;">&nbsp;</td>
-                        <td style="text-align: center; width: 85px; height: 72px;">&nbsp;</td>
-                        <td style="text-align: center; width: 86px; height: 72px;"><strong>Англ-1</strong></td>
-                        <td style="text-align: center; width: 108px; height: 72px;"><strong>Робо-11</strong><br><a href="https://robo74.ru/kvantorium/kursy-dlya-detey/promrobo/sorevnovatelnaya-robototehnika-middle">Соревновательная робототехника (Middle)</a></td>
-                        <td style="width: 107px; text-align: center; height: 72px;"><strong>Робо-5</strong><br><a style="text-align: center;" title="Юный техник" href="https://robo74.ru/kvantorium/kursy-dlya-detey/promrobo/yunyy-tehnik" target="_blank" rel="noopener">Юный&nbsp;<br>техник</a></td>
-                        <td style="width: 97px; text-align: center; height: 72px;">&nbsp;</td>
-                        </tr>
-                        </tbody>
-                        </table>
-                        </div>
-                        <p>ПГ - проектная группа</p>
-                    </div>
-              </div>
-           </div>
-        </div>
-        <div class="item">
+            <button class="in-dev-btn">В разработке</button>
         </div>
       </div>
 

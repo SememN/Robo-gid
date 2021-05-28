@@ -3,33 +3,12 @@
 #container{
   display: grid;
   grid-template-columns: 10% 80% 10%;
-  grid-template-rows: repeat(2, auto);
-  grid-row-gap: 2%;
-}
-
-/*main-info block*/
-#main-info{
-  grid-column-start: 2;
-  grid-column-end: 3;
-
-  display: grid;
-  grid-template-columns: 40% 60%;
-  grid-gap: 2%;
-}
-
-#kvant-logo{
-  justify-self: end;
-  max-height: 75%;
-  max-width: 75%;
 }
 
 /*courses block*/
 #courses{
   grid-column-start: 2;
   grid-column-end: 3;
-
-  grid-row-start: 2;
-  grid-row-end: 3;
 
   display: grid;
   grid-template-rows: repeat(5, auto);
@@ -41,11 +20,12 @@
   justify-self: center;
   grid-column-start: 1;
   grid-column-end: 4;
+  font-family: 'Font Awesome', sans-serif;
 }
 
 .course{
   display: grid;
-  grid-template-rows: 43% 12% 6% 5% 24% 10%;
+  grid-template-rows: 54% 15% 6% 6% 12%;
 }
 
 .course-logo{
@@ -84,30 +64,6 @@
   color: #6c757d;
   font-family: FreeSetC,sans-serif;
 }
-
-
-.button-mid{
-  max-width: 50%;
-  max-height: 70%;
-  background: #000;
-  color: #fff;
-  border: 2px solid #fff;
-  border-radius: 50px;
-  transition: 0.5s ease-in-out;
-}
-
-.button-mid:hover{
-  background: #fff;
-  color: #000;
-  border: 2px solid #000;
-  transform: scale(1.1);
-}
-
-
-
-
-
-
 
 /* Кнопка назад */
 .come-back{

@@ -10,14 +10,6 @@
 </head>
 <body>
     <div id="container">
-        <div id="main-info">
-            <img src="{{ kvant.preview }}" alt="" id="kvant-logo">
-            <div>
-                <h2 style="margin: 0;">{{ kvant.name }}</h2>
-                {{ kvant.description | safe }}
-            </div>
-
-        </div>
         <div id="courses">
             <h1 id="courses-header">Наши курсы</h1>
                 {% for course in courses_list %}
@@ -29,7 +21,6 @@
                         <strong><p class="course-creds">Направление: {{  course.direction }}</p></strong>
                         <strong><p class="course-creds">Уровень: {{ course.level }}</p></strong>
                         <p class="course-description">{{ course.description }}</p>
-                        <button class="button-mid">Записаться</button>
                     </div>
                 {% endfor %}
         </div>
