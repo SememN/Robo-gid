@@ -32,8 +32,8 @@ void stopping() {
   Serial.println(stepperR.getCurrent());
   listanse = stepperL.getCurrent() + delta * (listanse / distanse);
   ristanse = stepperR.getCurrent() + delta * (ristanse / distanse);
-  stepperL.setTarget(listanse, RELATIVE);
-  stepperR.setTarget(ristanse, RELATIVE);
+  stepperL.setTarget(listanse, ABSOLUTE);
+  stepperR.setTarget(ristanse, ABSOLUTE);
   Serial.println(stepperL.getTarget());
   Serial.println(stepperR.getTarget());
 }
