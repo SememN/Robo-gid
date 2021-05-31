@@ -1,0 +1,48 @@
+from fuzzywuzzy import fuzz
+import pyttsx3
+import speech_recognition as sr
+import os
+
+i = 1
+while True:
+    speak_engine = pyttsx3.init()
+
+    def speak(what):
+        print(what)
+        speak_engine.say(what)
+        speak_engine.runAndWait()
+        speak_engine.stop()
+
+    speak_engine = pyttsx3.init()
+    speak('Говорите')
+
+
+    r = sr.Recognizer()
+    mic = sr.Microphone(device_index = 1)
+
+
+    with mic as source:
+        r.adjust_for_ambient_noise(source, duration=0.5)
+        audio = r.listen(source)
+
+    word1 = r.recognize_google(audio, language='ru-RU').lower()
+
+
+
+    with open('text.txt', encoding='utf-8') as file:
+        for num_line, line in enumerate(file):
+            if word1 in line:
+                break
+
+
+
+    word2 = line.split('/')[0] #убирает все после /
+
+    format1 = (line.replace('/', '/').split('/')[0])
+
+
+    a = fuzz.WRatio(word2, word1)
+    if a >= 85:
+        request1 = line.replace(format1, '')  # убирает все из переменной x
+        speak(request1[1:])
+    i += 1
