@@ -1,0 +1,91 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <title>main page</title>
+    <link rel="stylesheet" type="text/css" href="{% static 'css/main_page/main.css' %}">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+</head>
+<body>
+    <div id="carousel-example-generic" class="carousel slide" data-ride="carousel" data-interval="false">
+      <!-- Indicators -->
+      <ol class="carousel-indicators recommended-list clearfix">
+        <li data-target="#carousel-example-generic" data-slide-to="0" class="active">Квантумы</li>
+        <li data-target="#carousel-example-generic" data-slide-to="1">Проекты</li>
+      </ol>
+
+      <!-- Wrapper for slides -->
+      <div class="carousel-inner" role="listbox">
+        <div class="item active">
+           <div class="kvantums-list">
+                <div class="kvantums-heading">
+                    <h1>Квантумы</h1>
+                </div>
+                <div class="kvantum-row-2">
+                    <a href="{% url 'kvants:it-kvant-page' %}">
+                        <img alt="it_kvant" src="{% static 'img/main_page/it_kvant.jpg' %}" width=250px height=250px>
+                    </a>
+                    <p class="kvant-name">IT Квантум</p>
+                </div>
+                <div class="kvantum-row-2">
+                    <a href="{% url 'kvants:aero-kvant-page' %}">
+                        <img alt="aero_kvant" src="{% static 'img/main_page/air_kvant.jpg' %}" width=250px height=250px>
+                    </a>
+                    <p class="kvant-name">Аэро Квантум</p>
+                </div>
+                <div class="kvantum-row-3">
+                    <a href="{% url 'kvants:auto-kvant-page' %}">
+                        <img alt="auto_kvant" src="{% static 'img/main_page/auto_kvant.png' %}" width=250px height=250px>
+                    </a>
+                    <p class="kvant-name">Авто Квантум</p>
+                </div>
+                <div class="kvantum-row-3">
+                    <a href="{% url 'kvants:hi-tech-kvant-page' %}">
+                        <img alt="high_tech_kvant" src="{% static 'img/main_page/high_tech_kvant.jpg' %}" width=250px height=250px>
+                    </a>
+                    <p class="kvant-name">Hi-Tech Квантум</p>
+                </div>
+                <div class="kvantum-row-4">
+                    <a href="{% url 'kvants:design-kvant-page' %}">
+                         <img alt="prom_design_kvant" src="{% static 'img/main_page/prom_design_kvant.png' %}" width=250px height=250px>
+                    </a>
+                    <p class="kvant-name">Промдизайн Квантум</p>
+                </div>
+                <div class="kvantum-row-4">
+                    <a href="{% url 'kvants:robo-kvant-page' %}">
+                        <img alt="prom_robo_kvant" src="{% static 'img/main_page/prom_robo_kvant.png' %}" width=250px height=250px>
+                    </a>
+                    <p class="kvant-name">Робо Квантум</p>
+                </div>
+               <div class="kvantum-row-5">
+                    <a href="{% url 'kvants:design-kvant-page' %}">
+                         <img alt="prom_design_kvant" src="{% static 'img/main_page/prom_design_kvant.png' %}" width=250px height=250px>
+                    </a>
+                </div>
+                <div class="kvantum-row-5">
+                    <a href="{% url 'kvants:robo-kvant-page' %}">
+                        <img alt="prom_robo_kvant" src="{% static 'img/main_page/prom_robo_kvant.png' %}" width=250px height=250px>
+                    </a>
+                </div>
+           </div>
+        </div>
+        <div class="item">
+            <button class="in-dev-btn">В разработке</button>
+        </div>
+      </div>
+
+      <!-- Controls -->
+      <a class="left carousel-control" href="#carousel-example-generic" role="button" data-slide="prev">
+        <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
+        <span class="sr-only">Previous</span>
+      </a>
+      <a class="right carousel-control" href="#carousel-example-generic" role="button" data-slide="next">
+        <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
+        <span class="sr-only">Next</span>
+      </a>
+    </div>
+</body>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+</html>
