@@ -12,7 +12,7 @@ GStepper< STEPPER2WIRE> stepperR(1, 5, 6, 7);
 
 void setup() {
   Serial.begin(115200);
-  
+
   stepperL.setRunMode(FOLLOW_POS);
   stepperL.setMaxSpeed(delta);
   stepperL.setAcceleration(delta / 2);
@@ -24,6 +24,9 @@ void setup() {
   stepperR.enable();
 }
 void loop() {
+
+  seing();
+
   if (stepperL.tick() && stepperR.tick()) {
     if (Serial.available()) {
       stopping();
@@ -32,17 +35,19 @@ void loop() {
   else if (!stepperL.tick() || !stepperR.tick()) {
     if (Serial.available()) {
       command = Serial.readString().toInt();
-      Serial.print("Команда - ");
+      Serial.print(" Command - ");
       Serial.println(command);
       kit = millis();
     }
 
     if (millis() - kit > 1000) {
-      Serial.println("Стою");
+      Serial.println(" I am staing");
     }
-    else if (!stepperL.tick() && !stepperR.tick() && command > 0) {
-      Serial.println("Произошла поправка в конституцию");
-      distanse = command;
+    else if (!stepperL.tick() && !stepperR.tick()) {
+      if (command > 0) {
+        Serial.println(" There was an amendment to the constitution");
+        distanse = command;
+      }
     }
     else
       doing(command);
