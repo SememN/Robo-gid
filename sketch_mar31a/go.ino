@@ -17,23 +17,23 @@ void doing(int comand)
     ristanse = -distanse;
   }
 
-  Serial.println("Полный Вперёд!:)");
+  Serial.println(" Just moving!");
   Serial.println(stepperL.getCurrent());
   Serial.println(stepperR.getCurrent());
-  stepperL.setTarget(listanse, RELATIVE);
-  stepperR.setTarget(ristanse, RELATIVE);
+  stepperL.setTarget(listanse, RELATIVE); // RELATIVE
+  stepperR.setTarget(ristanse, RELATIVE); // ABSOLUTE
   Serial.println(stepperL.getTarget());
   Serial.println(stepperR.getTarget());
 }
 
 void stopping() {
-  Serial.print("ПОЛНЫЙ СТОП!!!");
+  Serial.println(" FULL STOP!!!");
   Serial.println(stepperL.getCurrent());
   Serial.println(stepperR.getCurrent());
-  listanse = stepperL.getCurrent() + delta * (listanse / distanse);
-  ristanse = stepperR.getCurrent() + delta * (ristanse / distanse);
-  stepperL.setTarget(listanse, ABSOLUTE);
-  stepperR.setTarget(ristanse, ABSOLUTE);
+  listanse = delta * (listanse / distanse) + stepperL.getCurrent();
+  ristanse = delta * (ristanse / distanse) + stepperR.getCurrent();
+  stepperL.setTarget(listanse, ABSOLUTE); // RELATIVE
+  stepperR.setTarget(ristanse, ABSOLUTE); // ABSOLUTE
   Serial.println(stepperL.getTarget());
   Serial.println(stepperR.getTarget());
 }
