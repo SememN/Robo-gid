@@ -71,7 +71,18 @@
            </div>
         </div>
         <div class="item">
-            <button class="in-dev-btn">В разработке</button>
+            <div id="projects-container">
+                {% for project in projects %}
+                    <div class="project">
+                        <div class="project-preview">
+                            <img src="{{ project.preview }}" alt="Preview">
+                        </div>
+                        <h6 class="project-name">{{ project.name }}</h6>
+                        <p class="project-description">{{ project.description }}</p>
+                        <p class="project-teacher">{{ project.teacher }}</p>
+                    </div>
+                {% endfor %}
+            </div>
         </div>
       </div>
 
